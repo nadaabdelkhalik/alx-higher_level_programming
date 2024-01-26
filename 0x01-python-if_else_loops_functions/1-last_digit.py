@@ -5,7 +5,7 @@ last = number%10
 if number <0:
     last = -last
 if last == 0:
-    print(f"Last digit of {number :d} is {last:d} and is zero")
+    print(f"Last digit of {number :d} is {last:d} and is 0")
 elif last <6 & last != 0:
     print(f"Last digit of {number:d} is {last:d} and is less than 6 and not 0")
 elif last > 5:
