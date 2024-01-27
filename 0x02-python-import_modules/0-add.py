@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
 from add_0 import add
-a=1
-b=2
-print(add(a, b))
+
+if __name__ == "__main__":
+    a=1
+    b=2  
+    print("{}".format(add(a, b)))
