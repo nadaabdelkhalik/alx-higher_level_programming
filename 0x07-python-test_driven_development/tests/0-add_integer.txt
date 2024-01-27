@@ -1,41 +1,50 @@
- def add(a, b=98):
-    """
-    Function that adds 2 integers.
+The ``0-add_integer`` module
+======================
 
-    Args:
-        a (int): First integer.
-        b (int, optional): Second integer. Defaults to 98.
+Using ``add_integer``
+-------------------
 
-    Raises:
-        TypeError: If a or b are not integers or floats.
+Importing the function from the module:
+    >>> add_integer = __import__("0-add_integer").add_integer 
+Checking for module docstring:
+    >>> m = __import__("0-add_integer").__doc__
+    >>> len(m) > 1
+    True
 
-    Returns:
-        int: The addition of a and b.
-        
-    Importing the function from the module:
-	>>> add_integer = __import__("0-add_integer").add_integer
-    Checking for module docstring:
-	 >>> m = __import__("0-add_integer").__doc__
-	 >>> len(m) > 1
-	 True
+Checking for function docstring:
+    >>> f = __import__("0-add_integer").add_integer.__doc__
+    >>> len(f) > 1
+    True
 
-    Checking for function docstring:
-	 >>> f = __import__("0-add_integer").add_integer.__doc__
-         >>> len(f) > 1
-         True
-
-    >>> add(2, 3)
+Checking 2 positive:
+    >>> add_integer(2, 3)
     5
-    >>> add(-1, 1)
-    0
-    >>> add(0, 0)
-    0
-    Adds an integer and the default value (98)
 
-    >>> add_integer(5)
-    103
-    Test case 5: Testing TypeError for non-integer or non-float input
-    >>> add_integer(2, "3")
-    """
+Checking positive with negative:
+    >>> add_integer(2, -4)
+    -2
 
+Checking float with int:
+    >>> add_integer(2.1, 4)
+    6
+
+Checking int with float:
+    >>> add_integer(5, 7.8)
+    12
+
+Checking both float:
+    >>> add_integer(2.45, 3.1)
+    5
+
+Checking non-number with number:
+    >>> add_integer("1", 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Checking number with non-number:
+    >>> add_integer(3, "2")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
 
