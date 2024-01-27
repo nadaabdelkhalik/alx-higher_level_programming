@@ -1,0 +1,74 @@
+#!/usr/bin/python3
+"""
+The ``3-say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+Importing the function from the module:
+	>>> 3-say_my_name= __import__("3-say_my_name").say_my_name
+
+Checking for module docstring:
+	 >>> m = __import__("3-say_my_name").__doc__
+	 >>> len(m) > 1
+	 True
+
+Checking for function docstring:
+	 >>> f = __import__("3-say_my_name").say_my_name.__doc__
+         >>> len(f) > 1
+         True
+
+Checking for passing none as first name:
+	 >>>say_my_name(none, "Ahmed")
+	 Traceback (most recent call last):
+         ...
+         TypeError:first_name must be a string 
+
+Checking for passing None as second name:
+	>>>say_my_name("Ahmed", none)
+	 Traceback (most recent call last):
+         ...
+         TypeError:last_name must be a string
+Checking for passing int as first name:
+	 >>>say_my_name(2, "Ahmed")
+	 Traceback (most recent call last):
+         ...
+         TypeError:first_name must be a string 
+
+Checking for passing int as second name:
+	>>>say_my_name("Ahmed", 2)
+	 Traceback (most recent call last):
+         ...
+         TypeError:last_name must be a string
+
+Checking for passing float as first name:
+	 >>>say_my_name(2.4, "Ahmed")
+	 Traceback (most recent call last):
+         ...
+         TypeError:first_name must be a string 
+
+Checking for passing float as second name:
+	>>>say_my_name("Ahmed", 2.4)
+	 Traceback (most recent call last):
+         ...
+         TypeError:last_name must be a string
+Checking for passing bool as first name:
+	 >>>say_my_name(True, "Ahmed")
+	 Traceback (most recent call last):
+         ...
+         TypeError:first_name must be a string 
+
+Checking for passing bool as second name:
+	>>>say_my_name("Ahmed", false)
+	 Traceback (most recent call last):
+         ...
+         TypeError:last_name must be a string
+Checking for passing None as first and  second name:
+	>>>say_my_name(none, none)
+	Traceback (most recent call last):
+         ...
+         TypeError:first_name must be a string 
+	 Traceback (most recent call last):
+         ...
+         TypeError:last_name must be a string
